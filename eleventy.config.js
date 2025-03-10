@@ -28,7 +28,7 @@ module.exports = function(eleventyConfig) {
       // Use layouts from the plugin
       includes: '_layouts'
     },
-    pathPrefix: process.env.GITHUB_ACTIONS ? '/blog.test.io/' : '/'
+    pathPrefix: process.env.GITHUB_ACTIONS ? '/chris-barrett-ddts.github.io/' : '/'
   }
 
   };
