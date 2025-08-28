@@ -13,12 +13,16 @@ $govuk-font-family: system-ui, sans-serif;
 
 
 //Header customer styles
-.govuk-header {
+.govuk-header, .govuk-header:not(:focus){
     background: #0b3d23 !important;
     //border-top: 20px solid #0b3d23 !important;
     padding-top: 10px !important;
     border-bottom: 0 !important;
   }
+
+  .govuk-template--rebranded .govuk-header__link--homepage:not(:focus) {
+    background: #0b3d23 !important;
+    }
 
 .govuk-header__container {
     border-bottom:0 !important;
