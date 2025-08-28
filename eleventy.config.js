@@ -1,22 +1,43 @@
 import { govukEleventyPlugin } from '@x-govuk/govuk-eleventy-plugin'
 
-export default function(eleventyConfig) {
+const serviceName = 'Sustainable by design'
+
+export default function (eleventyConfig) {
   eleventyConfig.addPlugin(govukEleventyPlugin, {
     header: {
-        logotype: {
-          text: 'Sustainable by design'
-        }
+      logotype: {
+        text: serviceName
+      }
     },
-    titleSuffix: 'Sustainable by design',
-    icons: {mask: false, shortcut: false, touch: false},
+    serviceNavigation: {
+      search: {
+        indexPath: '/search-index.json'
+      },
+      navigation: [
+        {
+        href: "#",
+        text: "Principles",
+        active: true
+        },
+        {
+        href: "#",
+        text: "About"
+        }
+        ]
+    },
+    templates: {
+      searchIndex: true
+    },
+    titleSuffix: serviceName,
+    icons: { mask: false, shortcut: false, touch: false },
     homeKey: 'Principles',
     footer: {
-        copyright: {
-            text: '© Sustainable by design'
-          }
+      copyright: {
+        text: '© Sustainable by design'
+      }
     },
-    stylesheets: ['/assets/styles.css'],
-});
+    stylesheets: ['/assets/styles.css']
+  });
 
   return {
     dataTemplateEngine: 'njk',
@@ -30,4 +51,4 @@ export default function(eleventyConfig) {
     }
   }
 
-  };
+};
