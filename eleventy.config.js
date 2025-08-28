@@ -1,7 +1,6 @@
-const govukEleventyPlugin = require('@x-govuk/govuk-eleventy-plugin')
+import { govukEleventyPlugin } from '@x-govuk/govuk-eleventy-plugin'
 
-module.exports = function(eleventyConfig) {
-  // Register the plugin
+export default function(eleventyConfig) {
   eleventyConfig.addPlugin(govukEleventyPlugin, {
     header: {
         logotype: {
@@ -15,7 +14,8 @@ module.exports = function(eleventyConfig) {
         copyright: {
             text: '© Sustainable by design'
           }
-    }
+    },
+    stylesheets: ['/assets/styles.css', '/assets/application.css' ],
 });
 
   return {
