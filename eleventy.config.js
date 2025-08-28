@@ -15,7 +15,7 @@ export default function(eleventyConfig) {
             text: '© Sustainable by design'
           }
     },
-    stylesheets: ['/assets/styles.css', '/assets/application.css' ],
+    stylesheets: ['/assets/styles.css'],
 });
 
   return {

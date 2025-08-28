@@ -1,3 +1,14 @@
+
+  // Use GOV.UK Frontend
+$_font-family: system-ui, sans-serif;
+@use "pkg:govuk-frontend/dist/govuk" with (
+  $govuk-font-family: $_font-family,
+);
+
+// Use GOV.UK Eleventy Plugin components
+@use "pkg:@x-govuk/govuk-eleventy-plugin";
+
+
 $govuk-font-family: system-ui, sans-serif;
 
 
@@ -97,3 +108,6 @@ $govuk-font-family: system-ui, sans-serif;
   .app-prose-scope video {
      max-width: 100% !important; 
   }
+
+
+
